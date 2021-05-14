@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0.1 (Python 3.8.5 on win32)" generated="20210509 16:38:24.479" rpa="false" schemaversion="2">
+<suite id="s1" name="Login Tests" source="C:\Users\Sammy\Desktop\work\S351F\proj\WebDemo-master\login_tests">
+<suite id="s1-s1" name="Invalid Login" source="C:\Users\Sammy\Desktop\work\S351F\proj\WebDemo-master\login_tests\invalid_login.robot">
+<kw name="Open Browser To Login Page" library="resource" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210509 16:38:24.704" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:7272/'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210509 16:38:24.708" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<status status="PASS" starttime="20210509 16:38:24.708" endtime="20210509 16:38:24.708"/>
+</kw>
+<msg timestamp="20210509 16:38:24.712" level="FAIL">WebDriverException: Message: 'chromedriver' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home
+</msg>
+<msg timestamp="20210509 16:38:24.712" level="DEBUG">Traceback (most recent call last):
+  File "c:\users\sammy\anaconda3\lib\site-packages\SeleniumLibrary\__init__.py", line 492, in run_keyword
+    return DynamicCore.run_keyword(self, name, args, kwargs)
+  File "c:\users\sammy\anaconda3\lib\site-packages\robotlibcore.py", line 103, in run_keyword
+    return self.keywords[name](*args, **(kwargs or {}))
+  File "c:\users\sammy\anaconda3\lib\site-packages\SeleniumLibrary\keywords\browsermanagement.py", line 293, in open_browser
+    return self._make_new_browser(
+  File "c:\users\sammy\anaconda3\lib\site-packages\SeleniumLibrary\keywords\browsermanagement.py", line 324, in _make_new_browser
+    driver = self._make_driver(
+  File "c:\users\sammy\anaconda3\lib\site-packages\SeleniumLibrary\keywords\browsermanagement.py", line 716, in _make_driver
+    driver = self._webdriver_creator.create_driver(
+  File "c:\users\sammy\anaconda3\lib\site-packages\SeleniumLibrary\keywords\webdrivertools\webdrivertools.py", line 91, in create_driver
+    return creation_method(
+  File "c:\users\sammy\anaconda3\lib\site-packages\SeleniumLibrary\keywords\webdrivertools\webdrivertools.py", line 148, in create_chrome
+    return webdriver.Chrome(
+  File "c:\users\sammy\anaconda3\lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 73, in __init__
+    self.service.start()
+  File "c:\users\sammy\anaconda3\lib\site-packages\selenium\webdriver\common\service.py", line 81, in start
+    raise WebDriverException(</msg>
+<status status="FAIL" starttime="20210509 16:38:24.704" endtime="20210509 16:38:24.712"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" starttime="20210509 16:38:24.713" endtime="20210509 16:38:24.713"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="NOT RUN" starttime="20210509 16:38:24.713" endtime="20210509 16:38:24.713"/>
+</kw>
+<kw name="Login Page Should Be Open" library="resource">
+<status status="NOT RUN" starttime="20210509 16:38:24.713" endtime="20210509 16:38:24.713"/>
+</kw>
+<status status="FAIL" starttime="20210509 16:38:24.704" endtime="20210509 16:38:24.713"/>
+</kw>
+<test id="s1-s1-t1" name="Invalid Username">
+<status status="FAIL" starttime="20210509 16:38:24.713" endtime="20210509 16:38:24.714">Parent suite setup failed:
+WebDriverException: Message: 'chromedriver' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home
+</status>
+</test>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210509 16:38:24.716" endtime="20210509 16:38:24.716"/>
+</kw>
+<doc>A test suite containing tests related to invalid login.
+
+These tests are data-driven by their nature. They use a single
+keyword, specified with Test Template setting, that is called
+with different arguments to cover different scenarios.
+
+This suite also demonstrates using setups and teardowns in
+different levels.</doc>
+<status status="FAIL" starttime="20210509 16:38:24.508" endtime="20210509 16:38:24.716">Suite setup failed:
+WebDriverException: Message: 'chromedriver' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home
+</status>
+</suite>
+<status status="FAIL" starttime="20210509 16:38:24.480" endtime="20210509 16:38:24.719"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Login Tests">Login Tests</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Invalid Login">Login Tests.Invalid Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
