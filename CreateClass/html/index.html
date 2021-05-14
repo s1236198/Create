@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Create Class Page</title>
+  <link href="demo.css" media="all" rel="stylesheet" type="text/css">
+  <script type="text/javascript">
+    function create(start, end, name, diff, lang) {
+        if (name != "" && diff != ""  && lang != "") {
+            
+            if(start<=end){
+                window.location = "success.html";
+            }else{
+                alert("The stard date should not over the end date");
+                window.location = "error.html";
+            }
+
+        } else {
+            alert("Please enter all the field");
+            window.location = "error.html";
+        }
+    }
+  </script>
+</head>
+<body>
+  <div id="container">
+    <h1>Create Class Page</h1>
+      <p>Please input all the field and click the create button.</p>
+      <form name="create_form" onsubmit="create(this.StartDate_field.value, this.EndDate_field.value,this.Name_field.value, this.difficulty_field.value,this.lang_field.value); return false;">
+        <table>
+          <tr>
+            <td><label for="StartDate_field">Start Date:</label></td>
+            <td><input id="StartDate_field" size="30" type="date"></td>
+          </tr>
+          <tr>
+            <td><label for="EndDate_field">End Date:</label></td>
+            <td><input id="EndDate_field" size="30" type="date"></td>
+          </tr>
+          <tr>
+            <td><label for="Name_field">Teacher Name:</label></td>
+            <td><input id="Name_field" size="30" type="name"></td>
+          </tr>
+          <tr>
+            <td><label for="difficulty_field">Difficulty:</label></td>
+            <td><select id="difficulty_field"  type="difficulty">
+                <option></option>
+                <option>Beginner</option>
+                <option>Intermediate</option>
+                <option>Advanced</option>
+            </select></td>
+          </tr>
+          <tr>
+            <td><label for="lang_field">Medium of Instruction:</label></td>
+            <td><select id="lang_field"  type="lang">
+                <option></option>
+                <option>Cantonese</option>
+                <option>English</option>
+                <option>Mandarin</option>
+            </select></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td><input id="create_button" type="submit" value="CREATE"></td>
+          </tr>
+        </table>
+      </form>
+  </div>
+</body>
+</html>
